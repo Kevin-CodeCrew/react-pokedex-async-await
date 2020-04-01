@@ -8,7 +8,7 @@ class TopNav extends Component {
     render() { 
         return ( 
             <header>
-                <h1>Pokedex Header</h1>
+                <h1>Pokedex</h1>
             </header>
          );
     }

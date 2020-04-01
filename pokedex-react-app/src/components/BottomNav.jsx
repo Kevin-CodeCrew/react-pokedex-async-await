@@ -8,7 +8,7 @@ class BottomNav extends Component {
     render() { 
         return ( 
             <footer>
-                <h4>Pokedex Footer</h4>
+                <h4>Pokedex Footer</h4>                
             </footer>
          );
     }

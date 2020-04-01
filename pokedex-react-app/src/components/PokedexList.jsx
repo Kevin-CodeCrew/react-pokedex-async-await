@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Pokemon from "./Pokemon";
 
 class PokedexList extends Component {
-    // Link to pokedex url
+    // Link to pokedex url. First 100 pokemon
     pokedex_uri = "https://pokeapi.co/api/v2/pokemon?limit=100";
 
     constructor(props) {
@@ -12,6 +12,7 @@ class PokedexList extends Component {
         }
     }
 
+    // Component mounted so load the data from API
     componentDidMount() {
         this.loadData();
     }
@@ -32,7 +33,7 @@ class PokedexList extends Component {
     render() {
         return (
             this.state.pokemon_list.map((pokemon) => {
-                // FIXME: Should really make a second request to get the image from web service
+                // FIXME: Should really make a second request to get the image from web service but for now build local filename from number at end of .url property
                 let pokemon_url_parts = pokemon.url.split('/');
                 let pokemon_id = pokemon_url_parts[6];
                 return (
